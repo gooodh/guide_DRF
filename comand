@@ -1,0 +1,23 @@
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+pip freeze > requirements.txt
+django-admin.py startproject config .
+python manage.py runserver
+python manage.py startapp rental
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser admin stqhJQmh admin@books.bo
+python manage.py test
+
+
+https://github.com/nodesource/distributions
+npx create-react-app frontend
+npm start
+npm install # git clone
+
+git status
+git add .
+git commit -m ' '
+git push
