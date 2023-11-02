@@ -5,5 +5,4 @@ typing_extensions==4.8.0
 environs
 djangorestframework
 django-cors-headers==4.3.0
-dj-rest-auth
-django-allauth
+djoser

@@ -1,11 +1,22 @@
 from django.db import models
 
+from django.conf import settings
 
-class Friend(models.Model):
+
+class OwnedModel(models.Model):
+    owner = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True
+        )
+
+    class Meta:
+        abstract = True
+
+
+class Belonging(OwnedModel):
     name = models.CharField(max_length=100)
 
 
-class Belonging(models.Model):
+class Friend(models.Model):
     name = models.CharField(max_length=100)
 
 

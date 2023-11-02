@@ -9,6 +9,12 @@ python manage.py startapp rental
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser admin stqhJQmh admin@books.bo
+
+curl -X POST -d '{"username": "admin","password": "stqhJQmh"}' -H 'Content-Type: application/json' localhost:8000/api/auth/token/login/
+
+curl -X GET http://127.0.0.1:8000/api/v1/friends/ -H 'Authorization: Token a48e39a108b51fa27d1d6b551bd3137b464b25a6'[{“id”:5,“name”:“John Doe”}]
+curl -X GET http://127.0.0.1:8000/api/v1/friends/
+
 python manage.py test
 
 

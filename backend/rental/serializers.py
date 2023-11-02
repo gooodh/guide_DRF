@@ -9,9 +9,13 @@ class FriendSerializer(serializers.ModelSerializer):
 
 
 class BelongingSerializer(serializers.ModelSerializer):
+    owner = serializers.HiddenField(
+        default=serializers.CurrentUserDefault()
+        )
+
     class Meta:
         model = models.Belonging
-        fields = ('id', 'name')
+        fields = ('id', 'name', 'owner')
 
 
 class BorrowedSerializer(serializers.ModelSerializer):
