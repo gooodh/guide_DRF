@@ -8,8 +8,8 @@ from . import serializers
 
 
 class FriendViewset(viewsets.ModelViewSet):
-    model = Friend
     queryset = models.Friend.objects.all()
+    serializer_class = serializers.FriendSerializer
 
 
 class BelongingViewset(viewsets.ModelViewSet):
